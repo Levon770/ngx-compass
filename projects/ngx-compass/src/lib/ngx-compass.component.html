@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" [attr.width]="width" [attr.height]="width" viewBox="0 0 330 330" [class]="'cmps-theme-' + mode">
+    <g transform="translate(0,0)">
+        <svg [attr.width]="330" [attr.height]="330">
+            <g class="cmps-animate" [attr.transform]="'rotate(' + rotate + ') translate(5, 5)'">
+                <ng-container *ngFor="let text of values; let i = index">
+                    <g [attr.transform]="'translate(' + text.x + ', ' + text.y + ')'">
+                        <svg width="35" height="35">
+                            <text
+                                    x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                                    class="cmps-value cmps-animate"
+                                    [attr.transform]="'rotate(' + ((rotate || 0) * -1) + ')'"
+                            >
+                                {{text.value}}°
+                            </text>
+                        </svg>
+                    </g>
+                </ng-container>
+            </g>
+        </svg>
+    </g>
+    <g transform="translate(67,67)">
+        <svg [attr.width]="190" [attr.height]="190">
+            <g class="cmps-animate" [attr.transform]="'rotate(' + rotate + ') translate(0,0)'">
+                <ng-container *ngFor="let text of labels; let i = index">
+                    <g [attr.transform]="'translate(' + text.x + ', ' + text.y + ')'">
+                        <svg width="25" height="25">
+                            <text
+                                    x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                                    class="cmps-label cmps-animate"
+                                    [attr.transform]="'rotate(' + ((rotate || 0) * -1) + ')'"
+                            >
+                                {{text.value}}
+                            </text>
+                        </svg>
+                    </g>
+                </ng-container>
+            </g>
+        </svg>
+    </g>
+    <g transform="translate(30, 30)">
+        <svg [attr.width]="(radius * 2) + 30" [attr.height]="(radius * 2) + 30">
+            <g class="cmps-animate" [attr.transform]="'rotate(' + rotate + ') translate(' + ((radius) + 15 - 7) + ', 0)' ">
+                <path d="M 0,10 7,0 14,10 z" fill="red"/>
+            </g>
+        </svg>
+    </g>
+
+    <g transform="translate(45, 45)">
+        <svg [attr.width]="radius * 2" [attr.height]="radius * 2">
+            <g class="cmps-sc cmps-animate" [attr.transform]="'rotate(' + rotate + ')'">
+                <ng-container *ngFor="let coord of lines">
+                    <line [attr.x1]="coord.x1"
+                          [attr.x2]="coord.x2"
+                          [attr.y1]="coord.y1"
+                          [attr.y2]="coord.y2"
+                          [attr.stroke-width]="coord.w"
+                    ></line>
+                </ng-container>
+            </g>
+        </svg>
+    </g>
+    <g class="cmps-center" transform="translate(45, 45)">
+        <circle [attr.cx]="this.radius" [attr.cy]="this.radius" [attr.r]="this.radius / 6" class="cmps-center-circle" />
+        <ng-container *ngFor="let coord of center">
+            <line [attr.x1]="coord.x1"
+                  [attr.x2]="coord.x2"
+                  [attr.y1]="coord.y1"
+                  [attr.y2]="coord.y2"
+                  [attr.stroke-width]="coord.w"
+            >
+            </line>
+        </ng-container>
+    </g>
+</svg>

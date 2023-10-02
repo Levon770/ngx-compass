@@ -1,0 +1,29 @@
+{
+  "name": "ngx-compass",
+  "version": "0.1.0",
+  "author": {
+    "name": "Levon Hakobyan",
+    "email": "levon770@outlook.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Levon770/ngx-compass/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Levon770/ngx-compass.git"
+  },
+  "keywords": [
+    "angular",
+    "compass",
+    "ngx-compass"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": ">=15.0.0",
+    "@angular/core": ">=15.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

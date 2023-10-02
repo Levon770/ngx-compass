@@ -1,0 +1,57 @@
+$animation-duration: .5s;
+$dark: #000;
+$light: #fff;
+
+.cmps-animate {
+  transition: $animation-duration;
+  transform-origin: center;
+}
+
+.cmps-value {
+  font-size: 13px;
+  white-space: pre;
+  transition: $animation-duration;
+  fill: $dark
+}
+
+.cmps-label {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: pre;
+  transition: $animation-duration;
+  fill: $dark
+}
+
+.cmps-sc {
+  stroke: $dark;
+}
+
+.cmps-center {
+  stroke: $dark;
+}
+
+.cmps-center-circle {
+  fill: #ccc;
+  stroke: none;
+}
+
+.cmps-theme-dark {
+  .cmps-sc {
+    stroke: $light;
+  }
+
+  .cmps-center {
+    stroke-opacity: 0.5;
+    stroke: #fff;
+  }
+
+  .cmps-center-circle {
+    fill-opacity: 0.5;
+    fill: #fff;
+    stroke: none;
+  }
+
+  .cmps-value, .cmps-label {
+    fill: $light
+  }
+}
