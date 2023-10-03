@@ -3,6 +3,7 @@
 # NgxCompass Component
 
 [![MIT License][license-image]][license]
+[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/stackblitz-starters-s3ru66?file=src%2Fmain.ts)
 
 Compass Component, scallable angular component
 
